@@ -32,12 +32,17 @@ createComponent ('mosaic-ui-test-suite', {
             display: flex;
           }
           .controls {
-            flex-grow: 1;
-            min-width: 36%;
+            min-width: 500px;
             background-color: #dcdcdc;
+            overflow: auto;
+            resize: horizontal;
+          }
+          .controls::-webkit-resizer {
+            border-width: 9px;
+            border-style: solid;
+            border-color: transparent transparent transparent orangered;
           }
           .canvas {
-            flex-grow: 2;
           }
         </style>
         <div class="wrapper">
