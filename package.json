@@ -1,0 +1,24 @@
+{
+  "name": "mosaic-ui-test-env",
+  "version": "1.0.0",
+  "description": "A live test environment to test the mosaic UI components with different versions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server -p 7000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devBinay/mosaic-ui-test-env.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devBinay/mosaic-ui-test-env/issues"
+  },
+  "homepage": "https://github.com/devBinay/mosaic-ui-test-env#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

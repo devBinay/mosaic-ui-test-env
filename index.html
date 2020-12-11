@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaic UI test environment</title>
+</head>
+<body>
+    <mosaic-ui-test-suite></mosaic-ui-test-suite>
+    <script>
+        const config = {
+          loaderPath: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-loader/latest',
+          useData: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-data/latest',
+          useCore: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-core/latest',
+          useForms: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-forms/latest',
+          useI18n: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-i18n/latest',
+          useLayout: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-layout/latest',
+          useTools: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-tools/latest',
+          useMessaging: 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-messaging/latest'
+        }
+        if (!localStorage.getItem('mosaic-config')) {
+            localStorage.setItem('mosaic-config', JSON.stringify(config))
+        }
+        window.mosaicConfigure = JSON.parse(localStorage.getItem('mosaic-config'))
+        const mosaicLoaderScript = 'https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-loader/latest/loader.iife.js'
+        if (!localStorage.getItem('mosaic-loader-script')) {
+            localStorage.setItem('mosaic-loader-script', mosaicLoaderScript)
+        }
+        // window.mosaicLoaderScript = localStorage.getItem('mosaic-loader-script')
+     </script>
+      <!-- <script src="https://cdn.svc.oneadvanced.com/mosaic-ui/mosaic-components-loader/latest/loader.iife.js" async></script> -->
+      <script type="module" src="./components/index.js"></script>
+</body>
+</html>
